@@ -31,3 +31,5 @@ $this->get('many-to-many', 'ManyToManyController@manyToMany');
 Route::get('/', function () {
     return view('welcome');
 });
+
+

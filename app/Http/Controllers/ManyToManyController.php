@@ -33,4 +33,24 @@ class ManyToManyController extends Controller
             echo " - {$city->name} <br>";
         }
     }
+
+    public function manyToManyInsert(){
+        $dataForm =[8,9];
+        
+        $company = Company::where('name', 'EspecializaTI')->get()->first();
+
+        $company->cities()->attach($dataForm);      //add
+        // $company->cities()->detach($dataForm);   //remove
+        // $company->cities()->sync($dataForm);     //sincroniza
+
+
+        $cities =$company->cities;
+       
+        // foreach ($cities as $city){
+        //     echo " - {$city->name} <br>";
+        // }
+
+        return redirect('/many-to-many-inverse');
+
+    }
 }

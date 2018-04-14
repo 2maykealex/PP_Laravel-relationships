@@ -28,6 +28,7 @@ Many To Many
 */
 $this->get('many-to-many', 'ManyToManyController@manyToMany');
 $this->get('many-to-many-inverse', 'ManyToManyController@manyToManyInverse');
+$this->get('many-to-many-insert', 'ManyToManyController@manyToManyInsert');
 
 Route::get('/', function () {
     return view('welcome');

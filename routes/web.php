@@ -34,6 +34,7 @@ $this->get('many-to-many-insert', 'ManyToManyController@manyToManyInsert');
 Relacionamentos polimórficos
 */
 $this->get('polymorphics', 'PolymorphicController@polymorphic');
+$this->get('polymorphics-insert', 'PolymorphicController@polymorphicInsert'); 
 
 
 Route::get('/', function () {

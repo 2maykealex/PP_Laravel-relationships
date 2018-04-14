@@ -11,6 +11,37 @@ use App\Models\Comment;
 class PolymorphicController extends Controller
 {
     public function polymorphic(){
+        // $city = City::where('name', 'Guarulhos')->get()->first();
+
+        // echo "<h1>$city->name</h1><br>";
+
+        // $comments = $city->comments()->get();
+
+        // foreach ($comments as $comment){
+        //     echo "{$comment->description} <hr>";
+        // }
+
+
+        // $state = State::where('name', 'Tocantins')->get()->first();
+
+        // echo "<h1>$state->name</h1><br>";
+
+        // $comments = $state->comments()->get();
+
+        // foreach ($comments as $comment){
+        //     echo "{$comment->description} <hr>";
+        // }
+
+        $country = Country::where('name', 'França')->get()->first();
+
+        echo "<h1>$country->name</h1><br>";
+
+        $comments = $country->comments()->get();
+
+        foreach ($comments as $comment){
+            echo "{$comment->description} <hr>";
+        }
+
 
     }
 
